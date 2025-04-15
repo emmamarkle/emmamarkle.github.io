@@ -9,25 +9,11 @@ body {
   padding: 0;
 }
 
-/* Top bar with image and tabs */
+/* Top bar with tabs only */
 .topbar {
   display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #f1f1f1; /* Optional background for the top bar */
-  border-bottom: 2px solid #ccc; /* Optional border for separation */
-}
-
-/* Image on top left, make it smaller */
-.topbar img {
-  height: 80px; /* Reduced height to fit the layout */
-  margin-right: 20px;
-}
-
-/* Tabs next to the image */
-.tab {
-  display: flex;
-  gap: 15px;
+  justify-content: center; /* Center the tabs */
+  padding: 10px 0;
 }
 
 /* Individual tab links */
@@ -35,7 +21,7 @@ body {
   text-decoration: none;
   color: black;
   font-size: 17px;
-  padding: 10px 12px;
+  padding: 10px 20px;
   background: none;
   border: none;
   transition: 0.3s;
@@ -68,13 +54,26 @@ body {
   display: block;
 }
 
+/* Image placed outside the top bar, positioned at the top-left */
+.image-container {
+  padding: 20px;
+}
+
+.image-container img {
+  height: 150px; /* Adjust the height of the image as needed */
+}
+
 </style>
 </head>
 <body>
 
-<!-- Top bar with image and tabs -->
+<!-- Image outside the top bar -->
+<div class="image-container">
+  <img src="me.jpg" alt="Logo"> <!-- Replace with your image file -->
+</div>
+
+<!-- Top bar with centered tabs -->
 <div class="topbar">
-  <img src="me.jpg" alt="Logo">
   <div class="tab">
     <a href="#About" class="default">About me</a>
     <a href="#Pub">Publications</a>
