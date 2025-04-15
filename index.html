@@ -1,11 +1,78 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>Emma Markle</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab a {
+  float: left;
+  display: block;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tab a:hover {
+  background-color: #ddd;
+}
+
+.tab a.active {
+  background-color: #ccc;
+}
+
+/* Tab content - hidden by default */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  animation: fadeEffect 1s;
+}
+
+/* Show the tab content when targeted */
+.tabcontent:target {
+  display: block;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+</style>
 </head>
 <body>
 
-<h1 style="font-family: Arial; color: blue;">Emma Markle</h1>
-<p style="font-family: Arial; color: blue;">About me</p>
+<h3>Emma Markle</h3>
+
+<div class="tab">
+  <a href="#London">About me</a>
+  <a href="#Paris">Publications</a>
+  <a href="#Tokyo">Teaching</a>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3>About me</h3>
+  <p>Research in NLP</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Publications</h3>
+  <p>Generating Text from UMR</p>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Teaching</h3>
+  <p>TA for Intro to CS 2</p>
+</div>
 
 </body>
 </html>
