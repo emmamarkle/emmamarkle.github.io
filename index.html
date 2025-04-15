@@ -9,19 +9,17 @@ body {
   padding: 0;
 }
 
-/* Top bar with tabs only */
 .topbar {
   display: flex;
-  justify-content: center; /* Center the tabs */
-  padding: 10px 0;
+  justify-content: center; 
+  padding: 5px 0;
 }
 
-/* Individual tab links */
 .tab a {
   text-decoration: none;
   color: black;
   font-size: 17px;
-  padding: 10px 20px;
+  padding: 5px 15px;
   background: none;
   border: none;
   transition: 0.3s;
@@ -31,48 +29,41 @@ body {
   color: #2c9464;
 }
 
-/* Tab content area */
 .tabcontent {
   display: none;
-  padding: 20px;
+  padding: 15px;
   animation: fadeEffect 1s;
 }
 
-/* Show tab content when its target is selected */
 .tabcontent:target {
   display: block;
 }
 
-/* Optional fade animation */
 @keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
 }
 
-/* Make the first tab show by default when the page loads */
 #About:target, .default {
   display: block;
 }
 
-/* Image placed outside the top bar, positioned at the top-left */
 .image-container {
   padding: 20px;
 }
 
 .image-container img {
-  height: 150px; /* Adjust the height of the image as needed */
+  height: 350px;
 }
 
 </style>
 </head>
 <body>
 
-<!-- Image outside the top bar -->
 <div class="image-container">
-  <img src="me.jpg" alt="Logo"> <!-- Replace with your image file -->
+  <img src="me.jpg" alt="Logo"> 
 </div>
 
-<!-- Top bar with centered tabs -->
 <div class="topbar">
   <div class="tab">
     <a href="#About" class="default">About me</a>
@@ -81,7 +72,6 @@ body {
   </div>
 </div>
 
-<!-- Tab content -->
 <div id="About" class="tabcontent">
   <h3>About me</h3>
   <p>Research in NLP</p>
