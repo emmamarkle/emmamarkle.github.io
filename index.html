@@ -3,46 +3,61 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {font-family: Arial;}
-
-.tab {
-  overflow: hidden;
-  border: none;
-  background-color: none;
+body {
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
 }
 
+/* Top bar with image and tabs */
+.topbar {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Image on top left */
+.topbar img {
+  height: 40px;
+  margin-right: 20px;
+}
+
+/* Tabs next to the image */
+.tab {
+  display: flex;
+  gap: 15px;
+  border: none;
+  background: none;
+}
+
+/* Individual tab links */
 .tab a {
-  float: left;
-  display: block;
-  padding: 14px 16px;
   text-decoration: none;
   color: black;
-  transition: 0.3s;
   font-size: 17px;
+  padding: 10px 12px;
+  background: none;
+  border: none;
+  transition: 0.3s;
 }
 
 .tab a:hover {
-  background-color: #ddd;
+  color: #007BFF;
 }
 
-.tab a.active {
-  background-color: #ccc;
-}
-
-/* Tab content - hidden by default */
+/* Tab content area */
 .tabcontent {
   display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
+  padding: 20px;
   animation: fadeEffect 1s;
 }
 
-/* Show the tab content when targeted */
+/* Show tab content when its target is selected */
 .tabcontent:target {
   display: block;
 }
 
+/* Optional fade animation */
 @keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
@@ -51,12 +66,17 @@ body {font-family: Arial;}
 </head>
 <body>
 
-<div class="tab">
-  <a href="#About">About me</a>
-  <a href="#Pub">Publications</a>
-  <a href="#Teach">Teaching</a>
+<!-- Top bar with image and tabs -->
+<div class="topbar">
+  <img src="me.jpg" alt="Logo">
+  <div class="tab">
+    <a href="#About">About me</a>
+    <a href="#Pub">Publications</a>
+    <a href="#Teach">Teaching</a>
+  </div>
 </div>
 
+<!-- Tab content -->
 <div id="About" class="tabcontent">
   <h3>About me</h3>
   <p>Research in NLP</p>
@@ -71,5 +91,6 @@ body {font-family: Arial;}
   <h3>Teaching</h3>
   <p>TA for Intro to CS 2</p>
 </div>
+
 </body>
 </html>
