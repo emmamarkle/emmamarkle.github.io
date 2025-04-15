@@ -14,11 +14,13 @@ body {
   display: flex;
   align-items: center;
   padding: 10px 20px;
+  background-color: #f1f1f1; /* Optional background for the top bar */
+  border-bottom: 2px solid #ccc; /* Optional border for separation */
 }
 
-/* Image on top left */
+/* Image on top left, make it smaller */
 .topbar img {
-  height: 400px;
+  height: 80px; /* Reduced height to fit the layout */
   margin-right: 20px;
 }
 
@@ -26,8 +28,6 @@ body {
 .tab {
   display: flex;
   gap: 15px;
-  border: none;
-  background: none;
 }
 
 /* Individual tab links */
@@ -62,6 +62,12 @@ body {
   from {opacity: 0;}
   to {opacity: 1;}
 }
+
+/* Make the first tab show by default when the page loads */
+#About:target, .default {
+  display: block;
+}
+
 </style>
 </head>
 <body>
@@ -70,7 +76,7 @@ body {
 <div class="topbar">
   <img src="me.jpg" alt="Logo">
   <div class="tab">
-    <a href="#About">About me</a>
+    <a href="#About" class="default">About me</a>
     <a href="#Pub">Publications</a>
     <a href="#Teach">Teaching</a>
   </div>
