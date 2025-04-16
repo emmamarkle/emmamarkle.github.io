@@ -11,18 +11,29 @@ body {
 
 .topbar {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
+  position: fixed; /* Fix the top bar at the top of the page */
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1; /* Ensure it's on top of other content */
   padding: 5px 0;
+}
+
+.tab {
+  display: flex;
+  margin-top: 50px; /* Ensure there's space for the topbar */
 }
 
 .tab a {
   text-decoration: none;
   color: black;
   font-size: 17px;
-  padding: 5px 15px;
+  padding: 10px 15px;
   background: none;
   border: none;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .tab a:hover {
@@ -33,6 +44,7 @@ body {
   display: none;
   padding: 15px;
   animation: fadeEffect 1s;
+  margin-top: 60px; /* Adjust for topbar space */
 }
 
 .tabcontent:target {
