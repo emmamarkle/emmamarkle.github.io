@@ -1,90 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: Arial;
-  margin: 0;
-  padding: 0;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emma Markle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-.topbar {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40%;
-  background-color: white;
-  padding: 5px 0;
-  display: flex;
-  justify-content: center;
-}
+    body {
+      font-family: 'Nunito', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e0f4e6; /* soft green background */
+      color: #2d2d2d;
+    }
 
-.tab {
-  display: flex;
-  margin-top: 20px; 
-}
+    .image-container {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
 
-.tab a {
-  text-decoration: none;
-  color: black;
-  font-size: 17px;
-  padding: 10px 15px;
-  background: none;
-  border: none;
-  transition: 0.3s;
-  cursor: pointer;
-}
+    .image-container img {
+      height: 250px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
 
-.tab a:hover {
-  color: #2c9464;
-}
+    .image-container h3 {
+      font-weight: 600;
+      font-size: 1.8em;
+      margin-top: 10px;
+    }
 
-.tabcontent {
-  display: none;
-  padding: 15px;
-  animation: fadeEffect 1s;
-  margin-top: 10px; 
-  width: 30%; 
-  margin-left: auto;
-  margin-right: auto;
-}
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%;
+      background-color: white;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
 
-.tabcontent:target {
-  display: block;
-}
+    .tab {
+      display: flex;
+      gap: 15px;
+    }
 
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
+    .tab a {
+      text-decoration: none;
+      color: #2d2d2d;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
 
-#About:target, .default {
-  display: block;
-}
+    .tab a:hover {
+      background-color: #c6efd8;
+      color: #1c6f4a;
+    }
 
-.image-container {
-  padding: 20px;
-}
+    .tab a.active {
+      border: 2px solid #90e0a4;
+      background-color: #eaffea;
+      color: #1a5f3e;
+    }
 
-.image-container img {
-  height: 350px;
-}
-</style>
+    .tabcontent {
+      display: none;
+      padding: 20px;
+      margin: 90px auto 30px;
+      width: 60%;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      animation: fadeEffect 0.5s;
+      scroll-margin-top: 110px; /* Ensures content isn't hidden behind topbar */
+    }
+
+    .tabcontent:target {
+      display: block;
+    }
+
+    @keyframes fadeEffect {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    #About:target,
+    .default {
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
 <div class="image-container">
-  <img src="me.jpg" alt="Logo"> 
+  <img src="me.jpg" alt="Emma Markle">
   <h3>Emma Markle</h3>
 </div>
 
 <div class="topbar">
   <div class="tab">
-    <a href="#About" class="default">About me</a>
-    <a href="#Pub">Publications</a>
-    <a href="#Teach">Teaching</a>
+    <a href="#About" id="aboutTab">About me</a>
+    <a href="#Pub" id="pubTab">Publications</a>
+    <a href="#Teach" id="teachTab">Teaching</a>
   </div>
 </div>
 
@@ -102,6 +132,22 @@ body {
   <h3>Teaching</h3>
   <p>TA for Intro to CS 2</p>
 </div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab a');
+
+  function setActiveTab() {
+    tabs.forEach(tab => tab.classList.remove('active'));
+    const hash = window.location.hash || '#About';
+    const activeTab = document.querySelector(`.tab a[href="${hash}"]`);
+    if (activeTab) {
+      activeTab.classList.add('active');
+    }
+  }
+
+  window.addEventListener('hashchange', setActiveTab);
+  window.addEventListener('DOMContentLoaded', setActiveTab);
+</script>
 
 </body>
 </html>
