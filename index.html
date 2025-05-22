@@ -14,33 +14,46 @@
       font-family: 'Nunito', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #e0f4e6; /* soft green background */
+      background-color: #e0f4e6;
       color: #2d2d2d;
     }
 
+    /* Sidebar with image and name */
     .image-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 100vh;
+      background-color: #ffffff;
       text-align: center;
-      padding: 40px 20px 10px;
+      padding: 30px 10px;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
     }
 
     .image-container img {
-      height: 250px;
+      height: 200px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
     .image-container h3 {
       font-weight: 600;
-      font-size: 1.8em;
-      margin-top: 10px;
+      font-size: 1.5em;
+      margin-top: 12px;
+    }
+
+    /* Content shifted right to make space for sidebar */
+    .main-content {
+      margin-left: 240px;
     }
 
     .topbar {
       position: fixed;
       top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60%;
+      left: 240px;
+      width: calc(100% - 240px);
       background-color: white;
       padding: 10px 0;
       display: flex;
@@ -85,7 +98,7 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       animation: fadeEffect 0.5s;
-      scroll-margin-top: 110px; /* Ensures content isn't hidden behind topbar */
+      scroll-margin-top: 110px;
     }
 
     .tabcontent:target {
@@ -101,38 +114,69 @@
     .default {
       display: block;
     }
+
+    @media screen and (max-width: 768px) {
+      .image-container {
+        position: static;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+      }
+
+      .main-content {
+        margin-left: 0;
+      }
+
+      .topbar {
+        position: static;
+        width: 100%;
+        left: 0;
+      }
+
+      .tabcontent {
+        width: 90%;
+      }
+    }
   </style>
 </head>
 <body>
 
+<!-- Fixed Sidebar -->
 <div class="image-container">
   <img src="me.jpg" alt="Emma Markle">
   <h3>Emma Markle</h3>
 </div>
 
-<div class="topbar">
-  <div class="tab">
-    <a href="#About" id="aboutTab">About me</a>
-    <a href="#Pub" id="pubTab">Publications</a>
-    <a href="#Teach" id="teachTab">Teaching</a>
+<!-- Main Content Area -->
+<div class="main-content">
+
+  <!-- Topbar Tabs -->
+  <div class="topbar">
+    <div class="tab">
+      <a href="#About" id="aboutTab">About me</a>
+      <a href="#Pub" id="pubTab">Publications</a>
+      <a href="#Teach" id="teachTab">Teaching</a>
+    </div>
+  </div>
+
+  <!-- Tab Contents -->
+  <div id="About" class="tabcontent">
+    <h3>About me</h3>
+    <p>Research in NLP</p>
+  </div>
+
+  <div id="Pub" class="tabcontent">
+    <h3>Publications</h3>
+    <p>Generating Text from UMR</p>
+  </div>
+
+  <div id="Teach" class="tabcontent">
+    <h3>Teaching</h3>
+    <p>TA for Intro to CS 2</p>
   </div>
 </div>
 
-<div id="About" class="tabcontent">
-  <h3>About me</h3>
-  <p>Research in NLP</p>
-</div>
-
-<div id="Pub" class="tabcontent">
-  <h3>Publications</h3>
-  <p>Generating Text from UMR</p>
-</div>
-
-<div id="Teach" class="tabcontent">
-  <h3>Teaching</h3>
-  <p>TA for Intro to CS 2</p>
-</div>
-
+<!-- JavaScript to Highlight Active Tab -->
 <script>
   const tabs = document.querySelectorAll('.tab a');
 
