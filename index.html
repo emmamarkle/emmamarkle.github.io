@@ -18,12 +18,11 @@
       color: #2d2d2d;
     }
 
-    /* Sidebar with image and name */
     .image-container {
       position: fixed;
       top: 0;
       left: 0;
-      width: 300px; /* wider sidebar */
+      width: 300px; 
       height: 100vh;
       background-color: #ffffff;
       text-align: center;
@@ -33,7 +32,7 @@
     }
 
     .image-container img {
-      height: 280px; /* larger image */
+      height: 280px; 
       width: auto;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       object-fit: cover;
@@ -46,15 +45,14 @@
       margin-top: 20px;
     }
 
-    /* Main content pushed right */
     .main-content {
-      margin-left: 320px; /* match sidebar width + some spacing */
+      margin-left: 320px; 
     }
 
     .topbar {
       position: fixed;
       top: 0;
-      left: 300px; /* match sidebar width */
+      left: 300px; 
       width: calc(100% - 300px);
       background-color: white;
       padding: 15px 0;
@@ -62,7 +60,13 @@
       justify-content: center;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       z-index: 999;
-      border-radius: 0; /* removed rounded corners */
+      border-radius: 0; 
+    }
+
+    .subtitle {
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 5px;
     }
 
     .tab {
@@ -73,10 +77,10 @@
     .tab a {
       text-decoration: none;
       color: #2d2d2d;
-      font-size: 20px; /* larger tab font */
+      font-size: 20px; 
       font-weight: 600;
       padding: 12px 22px;
-      border-radius: 0; /* no rounded corners */
+      border-radius: 0;
       transition: 0.3s ease;
     }
 
@@ -86,7 +90,6 @@
     }
 
     .tab a.active {
-      border: 2px solid #90e0a4;
       background-color: #eaffea;
       color: #1a5f3e;
     }
@@ -142,16 +145,21 @@
 </head>
 <body>
 
-<!-- Fixed Sidebar -->
+
 <div class="image-container">
   <img src="me.jpg" alt="Emma Markle">
   <h3>Emma Markle</h3>
+  <p class="subtitle">
+    Amherst College<br>
+    Computer Science & Spanish Major<br>
+    Gregory S. Call Research Intern
+  </p>
 </div>
 
-<!-- Main Content Area -->
+
 <div class="main-content">
 
-  <!-- Topbar Tabs -->
+
   <div class="topbar">
     <div class="tab">
       <a href="#About" id="aboutTab">About me</a>
@@ -160,7 +168,7 @@
     </div>
   </div>
 
-  <!-- Tab Contents -->
+
   <div id="About" class="tabcontent">
     <h3>About me</h3>
     <p>Research in NLP</p>
@@ -177,7 +185,8 @@
   </div>
 </div>
 
-<!-- JavaScript to Highlight Active Tab -->
+  
+
 <script>
   const tabs = document.querySelectorAll('.tab a');
 
