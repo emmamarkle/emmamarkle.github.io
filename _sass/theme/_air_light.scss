@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Custom "Air" Light Skin — soft off-white with blue/green accents
+   ========================================================================== */
+
+/* === Core Palette === */
+$primary-color              : #1E3B5E;   // main highlight (dark blue)
+$secondary-color            : #6B9080;   // secondary highlight (green)
+$background                 : #CFE0F2;   // off-white background
+$text-dark                  : #1E3B5E;   // main text
+$text-light                 : #91B0D4;   // softer text accent
+$footer                     : darken($background, 12%); // subtle footer
+
+/* === Utility Colors === */
+$danger-color               : #F25C54;
+$info-color                 : $primary-color;
+$notice-color               : #7A8288;
+$success-color              : $secondary-color;
+$warning-color               : #F5B971;
+
+/* === Layout + General Settings === */
+$border-radius              : 6px;
+$box-shadow                 : 0 1px 3px rgba(0, 0, 0, 0.08);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+/* === Light Theme Variables === */
+:root {
+    --global-base-color                 : #{$background};
+    --global-bg-color                   : #{$background};
+    --global-footer-bg-color            : #{$footer};
+    --global-border-color               : #{$primary-color};
+    --global-dark-border-color          : darken($primary-color, 20%);
+    --global-code-background-color      : #DCE9F0; // subtle off-white for code blocks
+    --global-code-text-color            : #{$secondary-color};
+    --global-fig-caption-color          : #{$secondary-color};
+    --global-link-color                 : #{$primary-color};
+    --global-link-color-hover           : #{$secondary-color};
+    --global-link-color-visited         : lighten($secondary-color, 10%);
+    --global-masthead-link-color        : #{$text-dark};
+    --global-masthead-link-color-hover  : #{$primary-color};
+    --global-text-color                 : #{$text-dark};
+    --global-text-color-light           : #{$text-light};
+    --global-thead-color                : darken($background, 5%);
+
+    /* Make dates readable */
+    .talks .post-meta time,
+    .talks .post-meta .date,
+    .posts .post-meta time,
+    .posts .post-meta .date,
+    .publications .post-meta time,
+    .publications .post-meta .date {
+        color: $secondary-color;
+    }
+}
