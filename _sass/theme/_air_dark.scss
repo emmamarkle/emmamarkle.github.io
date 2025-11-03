@@ -3,12 +3,12 @@
    ========================================================================== */
 
 /* === Core Palette === */
-$primary-color              : #AFCBEB;   // main highlight (dark blue)
-$secondary-color            : #6B9080;   // secondary highlight (green)
-$background                 : #233C59;   // dark blue background
-$text-dark                  : #AFCBEB;   // main dark text
-$text-light                 : #EAF4F4;   // secondary light text
-$footer                     : darken($background, 5%); // slightly darker footer
+$primary-color              : #AFCBEB;   
+$secondary-color            : #6B9080;  
+$background                 : #233C59; 
+$text-dark                  : #AFCBEB;   
+$text-light                 : #EAF4F4;  
+$footer                     : darken($background, 5%);
 
 /* === Utility Colors === */
 $danger-color               : #F25C54;
