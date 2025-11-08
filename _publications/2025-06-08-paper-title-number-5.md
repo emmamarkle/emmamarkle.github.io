@@ -2,11 +2,11 @@
 title: "Generating Text from Uniform Meaning Representation."
 collection: publications
 category: conferences
-permalink: /publication/2024-02-17-paper-title-number-4
+permalink: 
 excerpt: 'We explore the first approaches to generating text from multilingual Uniform Meaning Representation (UMR) graphs, showing that fine-tuning AMR-to-text models with even limited UMR data produces high-quality text.'
 date: 2025-12-20
 venue: 'To appear in: AACL'
-paperurl: 
+paperurl: 'https://arxiv.org/abs/2502.11973'
 citation:
 ---
 
