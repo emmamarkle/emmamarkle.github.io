@@ -1,10 +1,10 @@
 ---
-title: "Intro to Computer Science II"
+title: "Teaching Assistant - Intro to Computer Science II"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2014-spring-teaching-1
 venue: "Amherst College, Computer Science Department"
-date: 2023-0-01
+date: 2023-10-01
 location: "Amherst, MA"
 ---
 
