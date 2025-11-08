@@ -6,7 +6,7 @@ permalink:
 excerpt: 'We show that incorporating Abstract Meaning Representation (AMR) graphs into vision-language models improves Visual Question Answering performance in low-resource settings.'
 date: 2025-11-04
 venue: 'Published in: EMNLP'
-paperurl: 'https://academicpages.github.io/files/2025.findings-emnlp.82.pdf'
+paperurl: 'https://aclanthology.org/2025.findings-emnlp.82/'
 citation: 
 ---
 
