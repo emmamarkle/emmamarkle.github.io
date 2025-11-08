@@ -1,11 +1,11 @@
 ---
-title: "Generating Text from Uniform Meaning Representation. FIRST"
+title: "Generating Text from Uniform Meaning Representation."
 collection: publications
 category: conferences
 permalink: /publication/2024-02-17-paper-title-number-4
 excerpt: 'This paper is about UMR Generation.'
 date: 2025-12-20
-venue: 'AACL'
+venue: 'To appear in: AACL 2025'
 paperurl: 'https://academicpages.github.io/files/paper3.pdf'
 citation: 'Your Name, You. (2024). &quot;Paper Title Number 3.&quot; <i>GitHub Journal of Bugs</i>. 1(3).'
 ---
