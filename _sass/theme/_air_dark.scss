@@ -1,13 +1,14 @@
 /* ==========================================================================
    Custom "Air" Dark Skin — readable blue background with blue/green accents
+E6F3FF - light, B3DAFF - med, 80C1FF - dark
    ========================================================================== */
 
 /* === Core Palette === */
-$primary-color              : #80C1FF; 
+$primary-color              : #B3DAFF; // med
 $secondary-color            : #6B9080;  
 $background                 : #003566;  
-$text-dark                  : #E6F3FF;   
-$text-light                 : #B3DAFF;  
+$text-dark                  : #E6F3FF;   // dark 
+$text-light                 : #80C1FF;  // light
 $footer                     : darken($background, 5%);
 
 /* === Utility Colors === */
