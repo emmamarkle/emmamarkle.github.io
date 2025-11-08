@@ -15,6 +15,6 @@ My research centers on natural language processing (NLP), with particular intere
 
 # News
 
-I will be orally presenting "Generating Text from Uniform Meaning Representation" at MAGICC 2025 (Amherst, MA)!
+I will be presenting a talk about "Generating Text from Uniform Meaning Representation" at MAGICC 2025 (Amherst, MA)!
 
 My paper "Generating Text from Uniform Meaning Representation" was accepted as a Main Conferernce paper at AACL!
