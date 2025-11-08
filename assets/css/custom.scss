@@ -1,0 +1,5 @@
+/* Remove underline on hover for publication titles */
+.publication a,
+.publication a:hover {
+  text-decoration: none !important;
+}
