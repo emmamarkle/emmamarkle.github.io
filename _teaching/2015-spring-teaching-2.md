@@ -1,14 +1,14 @@
 ---
-title: "Teaching experience 2"
+title: "Peer Tutor - Intro to Computer Science I"
 collection: teaching
-type: "Workshop"
-permalink: /teaching/2015-spring-teaching-1
-venue: "University 1, Department"
-date: 2015-01-01
-location: "City, Country"
+type: "Undergraduate course"
+permalink: /teaching/2014-spring-teaching-1
+venue: "Amherst College, Computer Science Department"
+date: 2023-10-10
+location: "Amherst, MA"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+Assisted in teaching an advanced object-oriented programming course covering data structures, code design, and algorithmic problem solving, supporting weekly labs and guiding a class of 40 students.
 
 Heading 1
 ======
