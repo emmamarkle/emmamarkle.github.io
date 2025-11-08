@@ -1,13 +1,13 @@
 /* ==========================================================================
-   Custom "Air" Dark Skin — readable blue background with blue/green accents 1E3B5E dark text
+   Custom "Air" Dark Skin — readable blue background with blue/green accents
    ========================================================================== */
 
 /* === Core Palette === */
-$primary-color              : #E6F3FF;   
-$secondary-color            : #6B9080;  
-$background                 : #004280; 
-$text-dark                  : #80C1FF;   
-$text-light                 : #B3DAFF;  
+$primary-color              : #E6F3FF;    // bright blue link color
+$secondary-color            : #6B9080;    // green accent
+$background                 : #004280;    // deep blue background
+$text-dark                  : #80C1FF;    // slightly muted blue text
+$text-light                 : #B3DAFF;    // lighter text for subtle elements
 $footer                     : darken($background, 5%);
 
 /* === Utility Colors === */
@@ -28,22 +28,32 @@ $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
 
 /* === Dark Theme Variables === */
+/* Minimal Mistakes applies dark mode via .dark on <html>, not data-theme="dark" */
+/* Support BOTH to avoid future bugs */
+
+html.dark,
 html[data-theme="dark"] {
     --global-base-color                 : #{$background};
     --global-bg-color                   : #{$background};
     --global-footer-bg-color            : #{$footer};
+
     --global-border-color               : #{$primary-color};
     --global-dark-border-color          : darken($primary-color, 20%);
+
     --global-code-background-color      : #1A2C3A;
     --global-code-text-color            : #{$secondary-color};
     --global-fig-caption-color          : #{$secondary-color};
+
     --global-link-color                 : #{$primary-color};
     --global-link-color-hover           : #{$secondary-color};
     --global-link-color-visited         : lighten($secondary-color, 10%);
+
     --global-masthead-link-color        : #{$text-dark};
     --global-masthead-link-color-hover  : #{$primary-color};
+
     --global-text-color                 : #{$text-dark};
     --global-text-color-light           : #{$text-light};
+
     --global-thead-color                : darken($background, 10%);
 
     /* Make dates readable */
