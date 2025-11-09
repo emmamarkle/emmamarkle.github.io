@@ -3,7 +3,7 @@ title: "Teaching Assistant - Data Structures"
 collection: teaching
 type: "Undergraduate course"
 venue: "Amherst College, Computer Science Department"
-date: 2023-02-01
+date: 2024-02-01
 location: "Amherst, MA"
 ---
 
