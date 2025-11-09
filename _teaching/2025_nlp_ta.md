@@ -3,7 +3,7 @@ title: "Teaching Assistant - Natural Language Processing"
 collection: teaching
 type: "Undergraduate course"
 venue: "Amherst College, Computer Science Department"
-date: 2023-09-01
+date: 2025-09-01
 location: "Amherst, MA"
 ---
 
