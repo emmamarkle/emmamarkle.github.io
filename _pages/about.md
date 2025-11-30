@@ -14,6 +14,7 @@ I am an undergraduate at Amherst College, pursuing a double major in Computer Sc
 My research centers on natural language processing (NLP), with particular interest in computational linguistics and semantics. I am especially passionate about multilingual and low-resource languages and advancing techniques in machine translation.
 
 # News
+My first-author paper "Generating Text from Uniform Meaning Representation" was nominated for the Best Paper Award at AACL!
 
 I will be presenting a talk about "Generating Text from Uniform Meaning Representation" at MAGICC 2025 (Amherst, MA)!
 
